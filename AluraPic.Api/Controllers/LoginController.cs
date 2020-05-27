@@ -23,6 +23,18 @@ namespace AluraPic.Api.Controllers
 
             return BadRequest();
         }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public IActionResult Signup(User newUser)
+        {
+            if (newUser.userName == "ricardo2")
+            {
+                return Ok(newUser);
+            }
+
+            return BadRequest();
+        }
     }
 
     public class User
